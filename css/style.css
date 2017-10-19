@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+/*Adjust various text and background settings for the header */
+header{
+	text-align: center;
+	color: white;
+	background-color: green;
+	background-image: url(../images/header-bg.jpg);
+	background-position: center;
+	background-size: cover;
+	padding: 30px;
+	margin-bottom:30px;
+}
+
+body{
+	/* Set font family to the google font Lato,
+	falls back to sans serif font if the page
+	somehow doesn't work */
+	font-family: 'Lato',sans-serif; 
+	line-height: 1.4; /* Set font height */
+	margin:0;
+
+}
+
+h1,h2,h3{
+	text-transform: uppercase;/* Turns the text to uppercase */
+	font-weight: 300; /* Adjust font weight for looks */
+}
+
+h1{
+	font-size: 40px;
+}
+
+header li{
+	display: inline; /* Displays the header list items as one line*/
+	text-align: center; /* Align header to center of browser */
+	margin-right:10px;
+}
+
+.container{
+	width:1000px;
+	/* The next line sets the following:
+		- The top and bottom margin to 0 pixels
+		- The left and rignt margin to 
+		automatically distribute evenly 
+	 It can be set to different values individually
+	 The order of values go in a clockwise direction
+	 	- Top
+	 	- Right
+	 	- Bottom
+	 	- Left */
+	margin:0 auto; 
+}
+
+.sidebar{
+	/* 40% of parent container will go to
+	the sidebar container */
+	width:40%;
+	
+	/* Force the sidebar container to the right */
+	float: right;
+	
+	background-color: #ffe0b2;
+	padding:30px;
+	background-image: url(../images/sidebar-bg.png);
+
+}
+
+.recipes{
+	/* 60% of parent container will go to
+	the recipes container */
+	width:60%;
+
+	/* Force the recipes container to the left */
+	float: left; 
+}
+
+article{
+	width:50%;
+	float:left;
+	padding:0 20px;
+}
+
+article img{
+	width:100%;
+
+}
+
+footer{
+	clear: both;
+	background-color: #2b2b2b;
+	color: white;
+	text-align: center;
+	letter-spacing: 5px;
+	padding:10px;
+
+}
+
+footer img{
+	margin: 5px;
+	text-align: center;
+
+}
+
+@media(max-width:1000px){
+	.sidebar{
+		display: none;
+	}
+	.recipe, .container{
+		width: 100%;
+	}
+}
+
+@media(max-width: 600px){
+	article{
+		width: 100%;
+	}
+}
